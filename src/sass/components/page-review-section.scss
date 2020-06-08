@@ -110,7 +110,7 @@
             color: $slider__article;
             &::before {
                 position: absolute;
-                top: -25%;
+                top: -15%;
                 left: -14%;
                 font-size: 130px;
                 z-index: -3;
@@ -130,7 +130,7 @@
                 margin: 50px 60px;
             }
             .slider__article::before {
-                top: -64%;
+                top: -37%;
                 left: -7%;
             }
             .slider_text {
@@ -155,7 +155,7 @@
             }
             .slider__article::before {
                 position: absolute;
-                top: -88%;
+                top: -45%;
                 left: -5%;
             }
             .slider__text {
