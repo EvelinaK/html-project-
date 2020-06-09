@@ -1,0 +1,139 @@
+ .contact-form__wrapper {
+     padding-top: 53px;
+     background-image: url(../images/contact-form_background.png);
+     background-repeat: no-repeat;
+     background-position: 50%;
+     background-size: cover;
+ }
+ 
+ .contact-form__title {
+     display: flex;
+     justify-content: center;
+     font-family: 'Montserrat';
+     font-weight: 600;
+     font-size: 40px;
+     color: white;
+     text-transform: uppercase;
+     margin: 0 auto;
+     padding-top: 100px;
+     padding-bottom: 20px;
+ }
+ 
+ .cont-title {
+     font-family: 'Averia Gruesa Libre';
+     display: flex;
+     justify-content: center;
+     font-family: 'Averia';
+     font-weight: 400;
+     color: #777777;
+     font-size: 16px;
+     margin-bottom: 70px;
+ }
+ 
+ .contact-form__row {
+     display: flex;
+     flex-direction: column;
+     width: 270px;
+     margin: 0 auto;
+ }
+ 
+ //  .contact {
+ //      background-color: #222222;
+ //      background-position: center;
+ //      background-repeat: no-repeat;
+ //      background-size: cover;
+ //      height: auto;
+ //      max-width: 100%;
+ //      z-index: 0;
+ //      position: relative;
+ //  }
+ //  .contact::before {
+ //      margin: 0 auto;
+ //      content: "";
+ //      position: absolute;
+ //      top: 0;
+ //      right: 0;
+ //      z-index: -5;
+ //      width: 630px;
+ //      height: 585px;
+ //      background-image: url(../images/contact-form_background.png);
+ //      background-position: center;
+ //      background-repeat: no-repeat;
+ //  }
+ form,
+ fieldset {
+     border-style: none;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ input[type="name"],
+ input[type="email"],
+ input[type="text"],
+ textarea {
+     height: 52px;
+     padding: 18px 10px;
+     margin-bottom: 27px;
+     font-size: 14px;
+     line-height: 100%;
+     border: 1px solid #000;
+     border-radius: 4px;
+     background: #fff;
+     color: #000;
+     width: 100%;
+ }
+ 
+ input[type="name"]::-webkit-input-placeholder,
+ input[type="email"]::-webkit-input-placeholder,
+ input[type="text"]::-webkit-input-placeholder,
+ textarea::-webkit-input-placeholder {
+     color: #c0c0c0;
+     font-size: 14px;
+     font-family: 'Montserrat';
+     font-weight: 600;
+     text-transform: uppercase;
+ }
+ 
+ input[type="name"]:invalid:not(:placeholder-shown),
+ input[type="email"]:invalid:not(:placeholder-shown),
+ input[type="text"]:invalid:not(:placeholder-shown),
+ textarea:invalid:not(:placeholder-shown) {
+     border-color: red;
+ }
+ 
+ input:valid:not(:placeholder-shown) {
+     border-color: green;
+ }
+ 
+ textarea {
+     height: 210px;
+     resize: none;
+     overflow: auto;
+     vertical-align: top;
+ }
+ 
+ .row {
+     display: flex;
+     margin: 0 -15px;
+ }
+ 
+ .col {
+     padding: 0 15px;
+ }
+ 
+ .btn-box {
+     display: flex;
+     justify-content: center;
+ }
+ 
+ .btn-form {
+     padding: 22px 45px;
+     border-radius: 4px;
+     background-color: #fed136;
+     font-size: 14px;
+     font-family: 'Montserrat';
+     font-weight: 600;
+     text-transform: uppercase;
+     color: white;
+     border: none;
+ }

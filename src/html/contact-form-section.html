@@ -1,0 +1,23 @@
+<section class="contact-form">
+    <div class="contact-form__wrapper">
+        <div class="container">
+            <h4 class="contact-form__title">Contact Us</h4>
+            <form class="contact-form__foo" name="contact-form_foo" method="POST" action="#">
+                <fieldset>
+                    <div class="contact-form__row">
+                        <div class="col">
+                            <input type="name" name="name" pattern="[a-zA-Z]+" placeholder="Your name *" required>
+                            <input type="email" name="email" pattern=".+@company\.com" placeholder="Your email *" required>
+                        </div>
+                        <div class="col">
+                            <textarea type="textarea" name="textarea" placeholder="Your message *" required></textarea>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btn-form" type="submit">Send message</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</section>
