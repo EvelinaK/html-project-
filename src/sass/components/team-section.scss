@@ -10,7 +10,7 @@
                 text-align: center;
                 color: $main-seagreen-color;
                 font-family: 'Raleway';
-                font-size: 28px;
+                font-size: 18px;
                 font-weight: 600;
                 margin: 0;
                 padding-bottom: 39px;
@@ -160,6 +160,9 @@
                 .team-section__title {
                     padding-top: 108px;
                 }
+                .team-section__title--text {
+                    font-size: 28px;
+                }
                 .team-cards {
                     flex-direction: row;
                     justify-content: space-between;
@@ -172,6 +175,9 @@
                 }
                 .team-section__title {
                     padding-top: 95px;
+                }
+                .team-section__title--text {
+                    font-size: 28px;
                 }
                 .team-cards {
                     flex-direction: row;
