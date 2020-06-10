@@ -52,6 +52,10 @@ input.toggleMenu:checked ~ ul {
   display: block;
   & .header {
     position: relative;
+    z-index: 1;
+  }
+  .presentation-item {
+    z-index: -1;
   }
 }
 
