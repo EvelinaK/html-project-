@@ -1,139 +1,244 @@
- .contact-form__wrapper {
-     padding-top: 53px;
-     background-image: url(../images/contact-form_background.png);
-     background-repeat: no-repeat;
-     background-position: 50%;
-     background-size: cover;
- }
- 
- .contact-form__title {
-     display: flex;
-     justify-content: center;
-     font-family: 'Montserrat';
-     font-weight: 600;
-     font-size: 40px;
-     color: white;
-     text-transform: uppercase;
-     margin: 0 auto;
-     padding-top: 100px;
-     padding-bottom: 20px;
- }
- 
- .cont-title {
-     font-family: 'Averia Gruesa Libre';
-     display: flex;
-     justify-content: center;
-     font-family: 'Averia';
-     font-weight: 400;
-     color: #777777;
-     font-size: 16px;
-     margin-bottom: 70px;
- }
- 
- .contact-form__row {
-     display: flex;
-     flex-direction: column;
-     width: 270px;
-     margin: 0 auto;
- }
- 
- //  .contact {
- //      background-color: #222222;
- //      background-position: center;
- //      background-repeat: no-repeat;
- //      background-size: cover;
- //      height: auto;
- //      max-width: 100%;
- //      z-index: 0;
- //      position: relative;
- //  }
- //  .contact::before {
- //      margin: 0 auto;
- //      content: "";
- //      position: absolute;
- //      top: 0;
- //      right: 0;
- //      z-index: -5;
- //      width: 630px;
- //      height: 585px;
- //      background-image: url(../images/contact-form_background.png);
- //      background-position: center;
- //      background-repeat: no-repeat;
- //  }
- form,
- fieldset {
-     border-style: none;
-     margin: 0;
-     padding: 0;
- }
- 
- input[type="name"],
- input[type="email"],
- input[type="text"],
- textarea {
-     height: 52px;
-     padding: 18px 10px;
-     margin-bottom: 27px;
-     font-size: 14px;
-     line-height: 100%;
-     border: 1px solid #000;
-     border-radius: 4px;
-     background: #fff;
-     color: #000;
-     width: 100%;
- }
- 
- input[type="name"]::-webkit-input-placeholder,
- input[type="email"]::-webkit-input-placeholder,
- input[type="text"]::-webkit-input-placeholder,
- textarea::-webkit-input-placeholder {
-     color: #c0c0c0;
-     font-size: 14px;
-     font-family: 'Montserrat';
-     font-weight: 600;
-     text-transform: uppercase;
- }
- 
- input[type="name"]:invalid:not(:placeholder-shown),
- input[type="email"]:invalid:not(:placeholder-shown),
- input[type="text"]:invalid:not(:placeholder-shown),
- textarea:invalid:not(:placeholder-shown) {
-     border-color: red;
- }
- 
- input:valid:not(:placeholder-shown) {
-     border-color: green;
- }
- 
- textarea {
-     height: 210px;
-     resize: none;
-     overflow: auto;
-     vertical-align: top;
- }
- 
- .row {
-     display: flex;
-     margin: 0 -15px;
- }
- 
- .col {
-     padding: 0 15px;
- }
- 
- .btn-box {
-     display: flex;
-     justify-content: center;
- }
- 
- .btn-form {
-     padding: 22px 45px;
-     border-radius: 4px;
-     background-color: #fed136;
-     font-size: 14px;
-     font-family: 'Montserrat';
-     font-weight: 600;
-     text-transform: uppercase;
-     color: white;
-     border: none;
- }
+        .contact-form {
+            @include bg-image($path: '../images/contact-form_background.png', $size: cover, $repeat: no-repeat, $pos: center);
+        }
+        
+        .contact-form__wrapper {
+            padding-top: 58px;
+        }
+        
+        .contact-form-footer {
+            margin: 0 auto;
+            @include flex(space-between, center);
+            flex-direction: column;
+            @include width-height(270px, 412px);
+            margin-bottom: 60px;
+            @media (min-width: 768px) {
+                @include width-height(572px, 336px);
+            }
+            @media (min-width: 1200px) {
+                margin: 0;
+                align-items: flex-end;
+            }
+            &__inputinfo {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                flex-direction: row;
+                width: 270px;
+                @media (max-width: 767px) {
+                    margin-bottom: 45px;
+                }
+                @media (min-width: 768px) {
+                    justify-content: space-between;
+                    @include width-height(570px, 290px);
+                }
+                @media (min-width: 1200px) {
+                    margin: 0;
+                }
+                & input {
+                    margin-bottom: 25px;
+                    border: none;
+                    border-radius: 3px;
+                    font-family: $main-font;
+                    @include width-height(270px, 45px);
+                    @media (min-width: 768px) {
+                        margin-bottom: 0px;
+                    }
+                }
+                & textarea {
+                    border: none;
+                    border-radius: 3px;
+                    font-family: $main-font;
+                    resize: none;
+                    overflow: auto;
+                    @include width-height(270px, 175px);
+                    @media (min-width: 768px) {
+                        width: 570px;
+                    }
+                }
+            }
+            &__infomessage input {
+                border: none;
+                border-radius: 3px;
+                background-color: $footer-form-text;
+                text-transform: uppercase;
+                font-size: 22px;
+                font-family: $main-font;
+                background-color: $second-blue-color;
+                color: $main-text-color;
+                @include width-height(170px, 50px);
+                transition: transform 200ms ease-in-out;
+            }
+            &__infomessage:hover input {
+                background-color: $footer-form-text;
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+        }
+        
+        .footer-title {
+            position: relative;
+            display: block;
+            font-family: $main-font;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $main-text-color;
+            text-align: center;
+            font-size: 18px;
+            line-height: 0.333;
+            margin: 0 auto 47px;
+            @media (min-width: 768px) {
+                width: 370px;
+                font-size: 28px;
+                margin-bottom: 75px;
+            }
+        }
+        
+        .footer-title::before,
+        .footer-title::after {
+            @extend %Pseudo;
+            @include width-height(60px, 1px);
+            background-color: $main-text-color;
+        }
+        
+        .footer-title::before {
+            right: 15px;
+        }
+        
+        .footer-title::after {
+            left: 15px;
+        }
+        
+        .footer-block {
+            @media (min-width: 1200px) {
+                margin: auto;
+                width: 1144px;
+                @include flex(space-between, baseline);
+                flex-direction: row-reverse;
+                flex-basis: auto;
+                margin-bottom: 68px;
+            }
+        }
+        
+        .footer-inform {
+            @media (min-width: 1200px) {
+                @include flex('', flex-start);
+                flex-direction: column;
+            }
+            &__get_in_tuoch {
+                @include font-settings(24px, 1);
+                font-family: $second-font;
+                color: $main-text-color;
+                text-align: center;
+                padding-bottom: 17px;
+                @media (min-width: 1200px) {
+                    text-align: left;
+                }
+            }
+            &__text {
+                color: $slider__cursor;
+                text-align: center;
+                padding-bottom: 40px;
+                margin: 0 auto;
+                width: 292px;
+                @media (min-width: 768px) {
+                    width: 430px;
+                }
+                @media (min-width: 1200px) {
+                    text-align: left;
+                }
+            }
+        }
+        
+        .footer-social-list {
+            @extend %list;
+            margin: 0 auto;
+            @include flex(space-between);
+            flex-direction: row;
+            width: 160px;
+            padding-bottom: 30px;
+            @media (min-width: 1200px) {
+                margin: 0;
+            }
+            &__item {
+                border-radius: 50%;
+                background-color: rosybrown;
+                @include width-height(45px, 45px);
+                transition: transform 200ms ease-in-out;
+                &:nth-child(2) {
+                    background-color: rosybrown;
+                }
+                &:nth-child(3) {
+                    background-color: royalblue;
+                }
+                &:hover {
+                    background-color: royalblue;
+                    transform: scale(1.15);
+                    cursor: pointer;
+                }
+                & a {
+                    display: block;
+                }
+                & svg {
+                    box-sizing: content-box;
+                    display: block;
+                    @include width-height(40px, 40px);
+                    padding: 5px;
+                    // padding-left: 12px;
+                    // padding-top: 12px;
+                }
+            }
+        }
+        
+        .footer__telefon-number {
+            @extend %link;
+            color: red;
+            text-align: center;
+            @media (min-width: 1200px) {
+                text-align: left;
+            }
+            &:hover {
+                color: rosybrown;
+            }
+        }
+        
+        .footer__email {
+            @extend %link;
+            position: relative;
+            color: yellowgreen;
+            text-align: center;
+            @media (max-width: 1199px) {
+                padding-bottom: 45px;
+            }
+            @media (min-width: 1200px) {
+                text-align: left;
+            }
+            &:hover {
+                color: yellow;
+            }
+        }
+        
+        .footer__foo {
+            display: flex;
+            margin: 0;
+            padding-left: 20px;
+            border-top: 1px solid black;
+        }
+        
+        .footer__copyright {
+            margin: 0;
+            text-align: left;
+            height: 85px;
+            @media (min-width: 768px) {
+                height: 60px;
+            }
+            & span {
+                padding-top: 20px;
+                display: block;
+                width: 170px;
+                color: burlywood;
+                @media (min-width: 768px) {
+                    width: 100%;
+                }
+            }
+        }
