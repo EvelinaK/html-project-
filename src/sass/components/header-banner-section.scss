@@ -14,13 +14,16 @@ body {
 }
 
 .header-bar {
-  height: 80px;
+  min-height: 80px;
   line-height: 80px;
-  // display: flex;
 }
 
 .nav {
   text-align: end;
+}
+
+.nav-item {
+  height: 60px;
 }
 
 .nav [type='checkbox'] {
@@ -42,6 +45,13 @@ body {
 @media all and (max-width: 767px) {
   .nav ul {
     display: none;
+  }
+}
+
+input.toggleMenu:checked ~ ul {
+  display: block;
+  & .header {
+    position: relative;
   }
 }
 
@@ -154,7 +164,8 @@ body {
   }
 }
 
-// MEDIA
+// TABLET
+
 @media (min-width: 768px) {
   .container {
     max-width: 708px;
@@ -176,9 +187,14 @@ body {
     @include font-settings(30px, 36px);
   }
 
-  // .nav-list {
-  //   width: 448px;
-  // }
+  .burger {
+    display: none;
+  }
+
+  .nav-list {
+    width: 448px;
+    line-height: 60px;
+  }
 
   .header-banner-section {
     padding-top: 280px;
