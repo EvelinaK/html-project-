@@ -134,6 +134,9 @@
             @media (min-width: 1200px) {
                 @include flex('', flex-start);
                 flex-direction: column;
+                .footer__cont-foo {
+                    margin: 0;
+                }
             }
             &__get_in_tuoch {
                 @include font-settings(24px, 1);
@@ -174,17 +177,17 @@
             }
             &__item {
                 border-radius: 50%;
-                background-color: rosybrown;
+                background-color: $footer-form-item1;
                 @include width-height(45px, 45px);
                 transition: transform 200ms ease-in-out;
                 &:nth-child(2) {
-                    background-color: rosybrown;
+                    background-color: $footer-form-item2;
                 }
                 &:nth-child(3) {
-                    background-color: royalblue;
+                    background-color: $footer-form-item3;
                 }
                 &:hover {
-                    background-color: royalblue;
+                    background-color: $footer-form-itemx;
                     transform: scale(1.15);
                     cursor: pointer;
                 }
@@ -195,29 +198,34 @@
                     box-sizing: content-box;
                     display: block;
                     @include width-height(40px, 40px);
-                    padding: 5px;
-                    // padding-left: 12px;
-                    // padding-top: 12px;
+                    padding: 10px 0px 0px 11px;
                 }
             }
         }
         
+        .footer__cont-foo {
+            @include center-flex($type: 'all');
+            margin: 0 auto;
+            width: 168px;
+            flex-wrap: wrap;
+        }
+        
         .footer__telefon-number {
             @extend %link;
-            color: red;
+            color: $footer-accent-text;
             text-align: center;
             @media (min-width: 1200px) {
                 text-align: left;
             }
             &:hover {
-                color: rosybrown;
+                color: $footer-main-text;
             }
         }
         
         .footer__email {
             @extend %link;
             position: relative;
-            color: yellowgreen;
+            color: $footer-accent-text;
             text-align: center;
             @media (max-width: 1199px) {
                 padding-bottom: 45px;
@@ -226,7 +234,8 @@
                 text-align: left;
             }
             &:hover {
-                color: yellow;
+                color: $footer-main-text;
+                ;
             }
         }
         
@@ -240,6 +249,7 @@
         .footer__copyright {
             margin: 0;
             text-align: left;
+            color: $footer-main-text;
             height: 85px;
             @media (min-width: 768px) {
                 height: 60px;
@@ -248,7 +258,7 @@
                 padding-top: 20px;
                 display: block;
                 width: 170px;
-                color: burlywood;
+                color: $footer-copy-text;
                 @media (min-width: 768px) {
                     width: 100%;
                 }
