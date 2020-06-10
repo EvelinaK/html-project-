@@ -14,6 +14,8 @@
     position: relative;
     @include center-flex($type: 'all');
     font-size: 18px;
+    margin: 0;
+    padding-top: 10px;
     &::after {
         @include pseudoline($display: inline-block, $content: '', $width: 60px, $height: 1px);
         background-color: $slider__pseudo-line-color;
@@ -32,6 +34,7 @@
     max-width: 292px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
 }
 
 
@@ -128,12 +131,16 @@
 @media(min-width: 768px) {
     .slider {
         max-width: 708px;
+        margin-bottom: 100px;
     }
     .slider__article {
         position: relative;
         line-height: 1.7;
         max-width: 100%;
         margin: 50px 60px;
+    }
+    .slider__text {
+        padding-top: 80px;
     }
     .slider__article::before {
         top: -37%;
@@ -153,6 +160,7 @@
 @media(min-width:1200px) {
     .slider {
         max-width: 1118px;
+        margin-bottom: 120px;
     }
     .slider__article {
         line-height: 1.7;
@@ -181,7 +189,6 @@
     margin-left: 15%;
     list-style: none;
     margin-top: 0;
-    margin-bottom: 0;
 }
 
 .slider__indicators li {

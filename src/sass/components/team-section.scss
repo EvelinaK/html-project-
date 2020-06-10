@@ -1,6 +1,7 @@
             /* стили контейнера секции team */
             
             .team-section__title {
+                padding-top: 60px;
                 text-align: center;
             }
             
@@ -9,7 +10,7 @@
                 text-align: center;
                 color: $main-seagreen-color;
                 font-family: 'Raleway';
-                font-size: 18px;
+                font-size: 28px;
                 font-weight: 600;
                 margin: 0;
                 padding-bottom: 39px;
@@ -137,7 +138,6 @@
             
             .team-card__name {
                 margin: 0;
-                padding: 20px 0;
                 font-family: 'Open Sans';
                 font-weight: 600;
                 font-size: 18px;
@@ -157,6 +157,11 @@
                 .container {
                     max-width: 708px;
                 }
+
+                .team-section__title {
+                    padding-top: 108px;
+                }
+
                 .team-cards {
                     flex-direction: row;
                     justify-content: space-between;
@@ -167,6 +172,11 @@
                 .container {
                     max-width: 1145px;
                 }
+
+                .team-section__title {
+                    padding-top: 95px;
+                }
+
                 .team-cards {
                     flex-direction: row;
                     justify-content: space-between;
