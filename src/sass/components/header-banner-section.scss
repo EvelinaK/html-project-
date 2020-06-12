@@ -127,6 +127,22 @@ input.toggleMenu:checked ~ ul {
   }
 }
 
+.download-button {
+  margin-bottom: 105px;
+  margin-left: 25px;
+  height: 48px;
+  width: 212px;
+  border: 0;
+  border-radius: 5px;
+  background-color: $main-seagreen-color;
+  color: $main-text-color;
+  &::before {
+    content: url(../images/icon-cloud-download.png);
+    vertical-align: sub;
+    padding-right: 15px;
+  }
+}
+
 // sadadadad
 
 .ham {
@@ -182,23 +198,6 @@ input.toggleMenu:checked ~ ul {
     background-size: contain;
     height: 403px;
     width: 232px;
-  }
-
-  .download-button {
-    margin-bottom: 105px;
-    margin-left: 25px;
-    height: 48px;
-    width: 212px;
-    border: 0;
-    border-radius: 5px;
-    background-color: $main-seagreen-color;
-    color: $main-text-color;
-  }
-
-  .button-link::before {
-    content: url(../images/icon-download.png);
-    vertical-align: sub;
-    padding-right: 15px;
   }
 
   .button-link {
