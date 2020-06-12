@@ -214,6 +214,9 @@
             @extend %link;
             color: $footer-accent-text;
             text-align: center;
+            font-family: $main-font;
+            font-size: 14px;
+            font-weight: 800;
             @media (min-width: 1200px) {
                 text-align: left;
             }
@@ -226,6 +229,9 @@
             @extend %link;
             position: relative;
             color: $footer-accent-text;
+            font-family: $main-font;
+            font-weight: 800;
+            font-size: 14px;
             text-align: center;
             @media (max-width: 1199px) {
                 padding-bottom: 45px;
@@ -250,6 +256,9 @@
             margin: 0;
             text-align: left;
             color: $footer-main-text;
+            font-family: $main-font;
+            font-weight: 400;
+            font-size: 14px;
             height: 85px;
             @media (min-width: 768px) {
                 height: 60px;

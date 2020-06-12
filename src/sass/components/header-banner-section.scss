@@ -11,6 +11,7 @@ body {
   top: 21px;
   background-color: $main-text-color;
   width: 100%;
+  z-index: 1;
 }
 
 .header-bar {
@@ -85,6 +86,7 @@ input.toggleMenu:checked ~ ul {
 .header-banner-section {
   font-family: $main-font;
   padding-top: 181px;
+  padding-bottom: 105px;
   color: $main-text-color;
   background-image: url(../images/header-banner-section-mobile.png);
   background-repeat: no-repeat;
@@ -140,7 +142,6 @@ input.toggleMenu:checked ~ ul {
 }
 
 .download-button {
-  margin-bottom: 105px;
   margin-left: 25px;
   height: 48px;
   width: 212px;
