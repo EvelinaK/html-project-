@@ -21,6 +21,9 @@ body {
 
 .nav-item {
   height: 60px;
+  &:not(:last-child) {
+    border-bottom: 2px solid $nav-white-color;
+  }
 }
 
 .nav [type='checkbox'] {
@@ -77,7 +80,7 @@ input.toggleMenu:checked ~ ul {
   color: $slider__article;
   opacity: 60%;
   @extend %link;
-  @include font-settings(12px, 36px);
+  @include font-settings(15px, 36px);
   &:hover {
     opacity: 100%;
   }
@@ -194,6 +197,10 @@ input.toggleMenu:checked ~ ul {
   .nav-list {
     width: 448px;
     line-height: 60px;
+  }
+
+  .nav-link {
+    @include font-settings(12px, 36px);
   }
 
   .header-banner-section {
