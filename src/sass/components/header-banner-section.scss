@@ -21,9 +21,6 @@ body {
 
 .nav-item {
   height: 60px;
-  &:not(:last-child) {
-    border-bottom: 2px solid $nav-white-color;
-  }
 }
 
 .nav [type='checkbox'] {
@@ -53,6 +50,12 @@ body {
   }
   & .header {
     z-index: 1;
+  }
+
+  .nav-item {
+    &:not(:last-child) {
+      border-bottom: 2px solid $nav-white-color;
+    }
   }
 }
 
