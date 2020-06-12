@@ -16,8 +16,6 @@ body {
 .header-bar {
   min-height: 80px;
   line-height: 80px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .nav-item {
@@ -28,51 +26,47 @@ body {
   display: none;
 }
 
+.nav label.toggleMenu {
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav label.toggleMenu .burger {
+  position: absolute;
+  bottom: 30px;
+  right: 5px;
+}
+
 @media all and (max-width: 767px) {
-  .nav ul {
-    display: none;
-  }
-  .nav {
-    position: relative;
+  .header-wrapper {
+    top: 30;
   }
 
-  .nav label.toggleMenu {
-    top: 15px;
-    display: block;
-    cursor: pointer;
-    position: relative;
-    height: 65px;
+  .nav ul {
+    display: none;
+    text-align: center;
   }
-  // .nav-list {
-  //   position: absolute;
-  //   width: 320px;
-  //   right: -15px;
-  //   text-align: center;
-  //   background-color: white;
-  // }
+  & .header {
+    z-index: 1;
+  }
 }
 
 input.toggleMenu:checked ~ ul {
   display: block;
-  & .header {
-    position: relative;
-    z-index: 1;
-  }
 }
 
 .logo-link {
   @extend %link;
   color: $main-seagreen-color;
   font-family: $second-font;
-  height: 80px;
-  @include font-settings(22px, 80px);
+  @include font-settings(22px, 36px);
 }
 
 .nav-list {
   @extend %list;
   text-transform: uppercase;
   display: flex;
-  width: 250px;
   justify-content: space-between;
 }
 
@@ -80,11 +74,11 @@ input.toggleMenu:checked ~ ul {
   font-family: $main-font;
   font-weight: bold;
   color: $slider__article;
-  opacity: 0.6;
+  opacity: 60%;
   @extend %link;
   @include font-settings(12px, 36px);
   &:hover {
-    opacity: 1;
+    opacity: 100%;
   }
 }
 
@@ -105,26 +99,44 @@ input.toggleMenu:checked ~ ul {
 }
 
 .banner-section-header__bottom {
-  margin: 0 0 40px;
+  margin: 0 0 11px;
   font-weight: normal;
   @include font-settings(18px, 24px);
 }
 
 .presentation-list {
   @extend %list;
-  padding-left: 22px;
   margin-bottom: 30px;
 }
 
 .presentation-item {
   @include font-settings(12px, 36px);
   position: relative;
+  display: flex;
   &::before {
     content: url(../images/angle-right.svg);
-    position: absolute;
-    top: 1px;
-    left: -35px;
+    margin-left: -10px;
   }
+}
+
+.banner-images {
+  position: relative;
+}
+
+.banner-phone__big {
+  display: none;
+  background-image: url(../images/screen.png);
+  background-size: contain;
+  height: 444px;
+  width: 256px;
+}
+
+.banner-phone__small {
+  display: none;
+  background-image: url(../images/screen.png);
+  background-size: contain;
+  height: 403px;
+  width: 232px;
 }
 
 .download-button {
@@ -143,93 +155,39 @@ input.toggleMenu:checked ~ ul {
   }
 }
 
-// sadadadad
+.button-link {
+  @extend %link;
+  @include font-settings(20px, 36px);
+  &:visited {
+    color: $main-text-color;
+  }
+}
 
-.ham {
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  transition: transform 400ms;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.hamRotate.active {
-  transform: rotate(45deg);
-}
-.hamRotate180.active {
-  transform: rotate(180deg);
-}
-.line {
-  fill: none;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: #000;
-  stroke-width: 5.5;
-  stroke-linecap: round;
-}
-.ham1 .top {
-  stroke-dasharray: 40 139;
-}
-.ham1 .bottom {
-  stroke-dasharray: 40 180;
-}
-.ham1.active .top {
-  stroke-dashoffset: -98px;
-}
-.ham1.active .bottom {
-  stroke-dashoffset: -138px;
-  // sdadaddada
+// TABLET
 
-  .banner-images {
-    position: relative;
+@media (min-width: 768px) {
+  .container {
+    max-width: 708px;
   }
 
-  .banner-phone__big {
+  .header {
+    position: absolute;
+    top: 30px;
+  }
+
+  .header-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-link {
+    @include font-settings(30px, 36px);
+  }
+
+  .burger {
     display: none;
-    background-image: url(../images/screen.png);
-    background-size: contain;
-    height: 444px;
-    width: 256px;
-  }
-
-  .banner-phone__small {
-    display: none;
-    background-image: url(../images/screen.png);
-    background-size: contain;
-    height: 403px;
-    width: 232px;
-  }
-
-  .button-link {
-    @extend %link;
-    @include font-settings(20px, 36px);
-    &:visited {
-      color: $main-text-color;
-    }
-  }
-
-  // TABLET
-
-  @media (min-width: 768px) {
-    .container {
-      max-width: 708px;
-    }
-
-    .header {
-      position: absolute;
-      top: 30px;
-    }
-
-    .header-bar {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo-link {
-      @include font-settings(30px, 36px);
-    }
   }
 
   .nav-list {
