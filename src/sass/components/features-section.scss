@@ -8,32 +8,6 @@
     padding-top: 58px;
 }
 
-.features-title {
-    position: relative;
-    margin-bottom: 27px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-family: $second-font;
-    color: $main-seagreen-color;
-    @include center-flex($type: 'all');
-    &::after {
-        @include pseudoline( $display: inline-block, $content: '', $width: 60px, $height: 1px);
-        background-color: $slider__pseudo-line-color;
-        margin-left: 10px;
-    }
-    &::before {
-        @include pseudoline( $display: inline-block, $content: '', $width: 60px, $height: 1px);
-        background-color: $slider__pseudo-line-color;
-        margin-right: 10px;
-    }
-}
-
-.features-title h3 {
-    margin: 0;
-    font-size: 18px;
-}
-
 .features-text {
     margin: 10px 0 28px;
     font-family: $main-font;

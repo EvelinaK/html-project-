@@ -14,3 +14,26 @@ img {
     height: auto;
     margin: 0 auto;
 }
+
+.section-title {
+    position: relative;
+    margin-bottom: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'Raleway';
+    color: $main-seagreen-color;
+    margin: 0;
+    @include center-flex($type: 'all');
+    &::after {
+        @include pseudoline( $display: inline-block, $content: '', $width: 60px, $height: 1px);
+        background-color: $slider__pseudo-line-color;
+        margin-left: 15px;
+    }
+    &::before {
+        @include pseudoline( $display: inline-block, $content: '', $width: 60px, $height: 1px);
+        background-color: $slider__pseudo-line-color;
+        margin-right: 15px;
+    }
+}

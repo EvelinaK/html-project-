@@ -88,11 +88,11 @@
         }
         
         .footer-title {
-            position: relative;
-            display: block;
-            font-family: $main-font;
-            font-weight: 700;
-            text-transform: uppercase;
+            // position: relative;
+            // display: block;
+            // font-family: $main-font;
+            // font-weight: 700;
+            // text-transform: uppercase;
             color: $main-text-color;
             text-align: center;
             font-size: 18px;
@@ -103,21 +103,6 @@
                 font-size: 28px;
                 margin-bottom: 75px;
             }
-        }
-        
-        .footer-title::before,
-        .footer-title::after {
-            @extend %Pseudo;
-            @include width-height(60px, 1px);
-            background-color: $main-text-color;
-        }
-        
-        .footer-title::before {
-            right: 15px;
-        }
-        
-        .footer-title::after {
-            left: 15px;
         }
         
         .footer-block {

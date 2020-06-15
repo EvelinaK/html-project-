@@ -1,31 +1,31 @@
 /* стили основного контейнера слайдера */
 
-.slider__title {
-    text-transform: uppercase;
-    text-align: center;
-    color: $main-seagreen-color;
-    font-family: 'Ralevay';
-    font-size: 18px;
-    font-weight: 400;
-    @include center-flex($type: 'all');
-}
+// .slider__title {
+//     text-transform: uppercase;
+//     text-align: center;
+//     color: $main-seagreen-color;
+//     font-family: 'Raleway';
+//     font-size: 18px;
+//     font-weight: 400;
+//     @include center-flex($type: 'all');
+// }
 
 .slider__text {
     position: relative;
     @include center-flex($type: 'all');
     font-size: 18px;
     margin: 0;
-    padding-top: 10px;
-    &::after {
-        @include pseudoline($display: inline-block, $content: '', $width: 60px, $height: 1px);
-        background-color: $slider__pseudo-line-color;
-        margin-left: 15px;
-    }
-    &::before {
-        @include pseudoline($display: inline-block, $content: '', $width: 60px, $height: 1px);
-        background-color: $slider__pseudo-line-color;
-        margin-right: 15px;
-    }
+    // padding-top: 10px;
+    // &::after {
+    //     @include pseudoline($display: inline-block, $content: '', $width: 60px, $height: 1px);
+    //     background-color: $slider__pseudo-line-color;
+    //     margin-left: 15px;
+    // }
+    // &::before {
+    //     @include pseudoline($display: inline-block, $content: '', $width: 60px, $height: 1px);
+    //     background-color: $slider__pseudo-line-color;
+    //     margin-right: 15px;
+    // }
 }
 
 .slider {
