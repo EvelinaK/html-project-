@@ -1,0 +1,278 @@
+body {
+  position: relative;
+}
+
+.container {
+  max-width: 292px;
+}
+
+.header {
+  position: absolute;
+  top: 21px;
+  background-color: $main-text-color;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-bar {
+  min-height: 80px;
+  line-height: 80px;
+}
+
+.nav-item {
+  height: 60px;
+}
+
+.nav [type='checkbox'] {
+  display: none;
+}
+
+.nav label.toggleMenu {
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav label.toggleMenu .burger {
+  position: absolute;
+  bottom: 30px;
+  right: 5px;
+}
+
+@media all and (max-width: 767px) {
+  .header-wrapper {
+    top: 30;
+  }
+
+  .nav ul {
+    display: none;
+    text-align: center;
+  }
+  & .header {
+    z-index: 1;
+  }
+
+  .nav-item {
+    &:not(:last-child) {
+      border-bottom: 2px solid $nav-white-color;
+    }
+  }
+}
+
+input.toggleMenu:checked ~ ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-link {
+  @extend %link;
+  color: $main-seagreen-color;
+  font-family: $second-font;
+  @include font-settings(22px, 36px);
+}
+
+.nav-list {
+  @extend %list;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link {
+  font-family: $main-font;
+  font-weight: bold;
+  color: $slider__article;
+  opacity: 60%;
+  @extend %link;
+  @include font-settings(15px, 36px);
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+.header-banner-section {
+  font-family: $main-font;
+  padding-top: 181px;
+  padding-bottom: 105px;
+  color: $main-text-color;
+  background-image: url(../images/header-banner-section-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-section-header__top {
+  margin: 0;
+  font-family: $second-font;
+  @include font-settings(25px, 36px);
+}
+
+.banner-section-header__bottom {
+  margin: 0 0 11px;
+  font-weight: normal;
+  @include font-settings(18px, 24px);
+}
+
+.presentation-list {
+  @extend %list;
+  margin-bottom: 30px;
+}
+
+.presentation-item {
+  @include font-settings(12px, 36px);
+  position: relative;
+  display: flex;
+  &::before {
+    content: url(../images/angle-right.svg);
+    margin-left: -10px;
+  }
+}
+
+.banner-images {
+  position: relative;
+}
+
+.banner-phone__big {
+  display: none;
+  background-image: url(../images/screen.png);
+  background-size: contain;
+  height: 444px;
+  width: 256px;
+}
+
+.banner-phone__small {
+  display: none;
+  background-image: url(../images/screen.png);
+  background-size: contain;
+  height: 403px;
+  width: 232px;
+}
+
+.download-button {
+  margin-left: 25px;
+  height: 48px;
+  width: 212px;
+  border: 0;
+  border-radius: 5px;
+  background-color: $main-seagreen-color;
+  color: $main-text-color;
+  &::before {
+    content: url(../images/icon-cloud-download.png);
+    vertical-align: sub;
+    padding-right: 15px;
+  }
+}
+
+.button-link {
+  @extend %link;
+  @include font-settings(20px, 36px);
+  &:visited {
+    color: $main-text-color;
+  }
+}
+
+// TABLET
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 708px;
+  }
+
+  .header {
+    position: absolute;
+    top: 30px;
+  }
+
+  .header-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-link {
+    @include font-settings(30px, 36px);
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .nav-list {
+    width: 448px;
+    line-height: 60px;
+  }
+
+  .nav-link {
+    @include font-settings(12px, 36px);
+  }
+
+  .header-banner-section {
+    padding-top: 280px;
+    color: $main-text-color;
+    height: 758px;
+    background-image: url(../images/header-banner-section-tablet.png);
+  }
+
+  .banner-section-header__top {
+    @include font-settings(42px, 36px);
+  }
+
+  .banner-section-header__bottom {
+    width: auto;
+    @include font-settings(22px, 36px);
+  }
+
+  .banner-phone__big {
+    position: absolute;
+    left: 436px;
+    bottom: -299px;
+    display: block;
+  }
+
+  .banner-phone__small {
+    position: absolute;
+    left: 394px;
+    top: -104px;
+    display: block;
+  }
+
+  .presentation-item {
+    @include font-settings(16px, 36px);
+  }
+
+  .download-button {
+    margin: 0 0 0 18px;
+  }
+}
+
+// DESKTOP
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1145px;
+  }
+
+  .nav-link {
+    @include font-settings(13px, 36px);
+  }
+
+  .banner-phone__big {
+    position: absolute;
+    height: 663px;
+    width: 382px;
+    left: 715px;
+    bottom: -328px;
+    display: block;
+  }
+
+  .banner-phone__small {
+    position: absolute;
+    height: 600px;
+    width: 346px;
+    left: 646px;
+    top: -272px;
+    display: block;
+  }
+}

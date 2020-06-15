@@ -1,6 +1,7 @@
             /* стили контейнера секции team */
             
             .team-section__title {
+                padding-top: 60px;
                 text-align: center;
             }
             
@@ -17,12 +18,12 @@
                 &::after {
                     @include pseudoline($display: inline-block, $content: '', $width: 60px, $height: 1px);
                     background-color: $slider__pseudo-line-color;
-                    margin-left: 30px;
+                    margin-left: 15px;
                 }
                 &::before {
                     @include pseudoline($display: inline-block, $content: '', $width: 60px, $height: 1px);
                     background-color: $slider__pseudo-line-color;
-                    margin-right: 30px;
+                    margin-right: 15px;
                 }
             }
             
@@ -100,20 +101,23 @@
             .team-overlay__icons {
                 width: 135px;
                 margin: 0 auto;
+<<<<<<< HEAD
                 padding-bottom: 10px;
+=======
+>>>>>>> 8e3019c5f271f9d4a6dca441eed23c59734db3d0
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
             }
-
+            
             .team-overlay__icon--twitter {
-            padding: 10px;
-            width: 42px;
-            height: 42px;
-            background-color: $team-icon-hover;
-            fill: $main-text-color;
+                padding: 10px;
+                width: 42px;
+                height: 42px;
+                background-color: $team-icon-hover;
+                fill: $main-text-color;
             }
-
+            
             .team-overlay__icon--facebook {
                 padding: 10px;
                 width: 42px;
@@ -121,7 +125,7 @@
                 background-color: $team-icon-hover;
                 fill: $main-text-color;
             }
-
+            
             .team-overlay__icon--linkedin {
                 padding: 10px;
                 width: 42px;
@@ -129,7 +133,7 @@
                 background-color: $team-icon-hover;
                 fill: $main-text-color;
             }
-
+            
             .team-card__description {
                 display: flex;
                 flex-direction: column;
@@ -138,7 +142,7 @@
             
             .team-card__name {
                 margin: 0;
-                padding: 20px 0;
+                margin-bottom: 10px;
                 font-family: 'Open Sans';
                 font-weight: 600;
                 font-size: 18px;
@@ -158,6 +162,12 @@
                 .container {
                     max-width: 708px;
                 }
+                .team-section__title {
+                    padding-top: 108px;
+                }
+                .team-section__title--text {
+                    font-size: 28px;
+                }
                 .team-cards {
                     flex-direction: row;
                     justify-content: space-between;
@@ -168,12 +178,18 @@
                 .container {
                     max-width: 1145px;
                 }
+                .team-section__title {
+                    padding-top: 95px;
+                }
+                .team-section__title--text {
+                    font-size: 28px;
+                }
                 .team-cards {
                     flex-direction: row;
                     justify-content: space-between;
                 }
             }
-
+            
             #icon-twitter {
                 width: 22px;
                 height: 22px;

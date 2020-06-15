@@ -1,0 +1,275 @@
+        .contact-form {
+            @include bg-image($path: '../images/contact-form_background.png', $size: cover, $repeat: no-repeat, $pos: center);
+        }
+        
+        .contact-form__wrapper {
+            padding-top: 58px;
+        }
+        
+        .contact-form-footer {
+            margin: 0 auto;
+            @include flex(space-between, center);
+            flex-direction: column;
+            @include width-height(270px, 412px);
+            margin-bottom: 60px;
+            @media (min-width: 768px) {
+                @include width-height(572px, 336px);
+            }
+            @media (min-width: 1200px) {
+                margin: 0;
+                align-items: flex-end;
+            }
+            &__inputinfo {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                flex-direction: row;
+                width: 270px;
+                @media (max-width: 767px) {
+                    margin-bottom: 45px;
+                }
+                @media (min-width: 768px) {
+                    justify-content: space-between;
+                    @include width-height(570px, 290px);
+                }
+                @media (min-width: 1200px) {
+                    margin: 0;
+                }
+                & input {
+                    margin-bottom: 25px;
+                    border: none;
+                    outline: none;
+                    border-radius: 3px;
+                    font-family: $main-font;
+                    font-family: $main-font;
+                    @include width-height(270px, 45px);
+                    @media (min-width: 768px) {
+                        margin-bottom: 0px;
+                    }
+                }
+                & input[type="name"]::-webkit-input-placeholder,
+                input[type="email"]::-webkit-input-placeholder,
+                input[type="text"]::-webkit-input-placeholder,
+                textarea::-webkit-input-placeholder {
+                    color: $footer-form-input;
+                    font-size: 16px;
+                    font-family: $main-font;
+                    font-weight: 400;
+                }
+                & textarea {
+                    border: none;
+                    border-radius: 3px;
+                    font-family: $main-font;
+                    resize: none;
+                    overflow: auto;
+                    @include width-height(270px, 175px);
+                    @media (min-width: 768px) {
+                        width: 570px;
+                    }
+                }
+            }
+            &__infomessage input {
+                border: none;
+                border-radius: 3px;
+                background-color: $footer-form-text;
+                text-transform: uppercase;
+                font-size: 22px;
+                font-family: $main-font;
+                background-color: $second-blue-color;
+                color: $main-text-color;
+                @include width-height(170px, 50px);
+                transition: transform 200ms ease-in-out;
+            }
+            &__infomessage:hover input {
+                background-color: $footer-form-text;
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+        }
+        
+        .footer-title {
+            position: relative;
+            display: block;
+            font-family: $main-font;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $main-text-color;
+            text-align: center;
+            font-size: 18px;
+            line-height: 0.333;
+            margin: 0 auto 47px;
+            @media (min-width: 768px) {
+                width: 370px;
+                font-size: 28px;
+                margin-bottom: 75px;
+            }
+        }
+        
+        .footer-title::before,
+        .footer-title::after {
+            @extend %Pseudo;
+            @include width-height(60px, 1px);
+            background-color: $main-text-color;
+        }
+        
+        .footer-title::before {
+            right: 15px;
+        }
+        
+        .footer-title::after {
+            left: 15px;
+        }
+        
+        .footer-block {
+            @media (min-width: 1200px) {
+                margin: auto;
+                width: 1144px;
+                @include flex(space-between, baseline);
+                flex-direction: row-reverse;
+                flex-basis: auto;
+                margin-bottom: 68px;
+            }
+        }
+        
+        .footer-inform {
+            @media (min-width: 1200px) {
+                @include flex('', flex-start);
+                flex-direction: column;
+                .footer__cont-foo {
+                    margin: 0;
+                }
+            }
+            &__get_in_tuoch {
+                @include font-settings(24px, 1);
+                font-family: $second-font;
+                color: $slider__pseudo-blackquote;
+                text-align: center;
+                padding-bottom: 17px;
+                @media (min-width: 1200px) {
+                    text-align: left;
+                }
+            }
+            &__text {
+                color: $footer-form-inform;
+                font-family: $main-font;
+                font-size: 14px;
+                text-align: center;
+                padding-bottom: 40px;
+                margin: 0 auto;
+                width: 292px;
+                @media (min-width: 768px) {
+                    width: 430px;
+                }
+                @media (min-width: 1200px) {
+                    text-align: left;
+                }
+            }
+        }
+        
+        .footer-social-list {
+            @extend %list;
+            margin: 0 auto;
+            @include flex(space-between);
+            flex-direction: row;
+            width: 160px;
+            padding-bottom: 30px;
+            @media (min-width: 1200px) {
+                margin: 0;
+            }
+            &__item {
+                border-radius: 50%;
+                background-color: $footer-form-item1;
+                @include width-height(45px, 45px);
+                transition: transform 200ms ease-in-out;
+                &:nth-child(2) {
+                    background-color: $footer-form-item2;
+                }
+                &:nth-child(3) {
+                    background-color: $footer-form-item3;
+                }
+                &:hover {
+                    background-color: $footer-form-itemx;
+                    transform: scale(1.15);
+                    cursor: pointer;
+                }
+                & a {
+                    display: block;
+                }
+                & svg {
+                    box-sizing: content-box;
+                    display: block;
+                    @include width-height(40px, 40px);
+                }
+            }
+        }
+        
+        .footer__cont-foo {
+            @include center-flex($type: 'all');
+            margin: 0 auto;
+            width: 168px;
+            flex-wrap: wrap;
+        }
+        
+        .footer__telefon-number {
+            @extend %link;
+            color: $footer-accent-text;
+            text-align: center;
+            font-family: $main-font;
+            font-size: 14px;
+            font-weight: 800;
+            @media (min-width: 1200px) {
+                text-align: left;
+            }
+            &:hover {
+                color: $footer-main-text;
+            }
+        }
+        
+        .footer__email {
+            @extend %link;
+            position: relative;
+            color: $footer-accent-text;
+            font-family: $main-font;
+            font-weight: 800;
+            font-size: 14px;
+            text-align: center;
+            @media (max-width: 1199px) {
+                padding-bottom: 45px;
+            }
+            @media (min-width: 1200px) {
+                text-align: left;
+            }
+            &:hover {
+                color: $footer-main-text;
+                ;
+            }
+        }
+        
+        .footer__foo {
+            display: flex;
+            margin: 0;
+            padding-left: 20px;
+            border-top: 1px solid $footer-form-line;
+        }
+        
+        .footer__copyright {
+            margin: 0;
+            text-align: left;
+            color: $footer-main-text;
+            font-family: $main-font;
+            font-weight: 400;
+            font-size: 14px;
+            height: 85px;
+            @media (min-width: 768px) {
+                height: 60px;
+            }
+            & span {
+                padding-top: 20px;
+                display: block;
+                width: 170px;
+                color: $footer-copy-text;
+                @media (min-width: 768px) {
+                    width: 100%;
+                }
+            }
+        }
